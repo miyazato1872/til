@@ -26,3 +26,26 @@ class Main {
   }
 }
 ```
+
+```java
+class Main {
+  public static void main(String[] args) {
+    int radius;
+    radius = 5;
+    System.out.println(radius * radius * 3.14);
+  }
+}
+```
+① int radius;によって、int型の変数radiusを宣言する  
+② radius = 5;によって、変数radiusに整数の5を代入する     
+③ printlnを実行して、計算結果を出力する。    
+
+# 型推論
+```java
+class Main {
+  public static void main(String[] args) {
+    var radius = 5;
+    System.out.println(radius * radius * 3.14);
+  }
+}
+```

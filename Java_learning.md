@@ -49,3 +49,24 @@ class Main {
   }
 }
 ```
+
+# 代数演算子
+## Javaで四則演算
+
+```java
+class Main {
+    public static void main(String[] args) {
+        System.out.println(1000 + 2000);
+        System.out.println(3000 - 1500);
+        System.out.println(50 * 40);
+        System.out.println(600 / 15);
+        System.out.println(5 % 2);
+    }
+}
+```
+出力結果   
+3000   
+1500   
+2000   
+40   
+1   

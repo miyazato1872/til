@@ -93,5 +93,5 @@ array = [1,2,3,4,5,6,7,8,9,10]
 array.sum{ |num| num %2 == 0 }
 ```
 
-以下参考URL（ハッシュも書いてる）
+参考URL（ハッシュも書いてる）
 https://qiita.com/rllllho/items/94e8fde8266f14275961

@@ -1,5 +1,5 @@
 ### 進捗メモ：次は以下のカリキュラムから
-[https://master.tech-camp.in/v2/curriculums/4192](https://master.tech-camp.in/v2/curriculums/4193)
+https://master.tech-camp.in/v2/curriculums/4194
 ```ruby
 ```
 
@@ -62,5 +62,23 @@ gets.chomp
 pencil_case = ["ペン", "消しゴム", "定規"]
 puts pencil_cas
 # ↑配列の生成と呼び出し
+
+配列 << 追加する要素 # 配列演算子(<<) 配列に新しい要素を追加したいとき
+```
+
+- 添字  
+配列の各要素に割り振られた番号で、「0」から始まる。取得方法は以下
+```ruby
+puts pencil_case[1]
+
+pencil_case[1] = "修正ペン" # 要素を変更する時は左記の記述
+```
+
+### lengthメソッド
+例　irb  
+```ruby
+# 配列内の要素の数を返す
+irb(main):001:0> ['あお', 'きいろ', 'あか'].length
+=> 3
 ```
 

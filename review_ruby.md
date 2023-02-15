@@ -179,3 +179,25 @@ puts teacher[:name]
 ## 配列は、複数の値を順番で管理し1つにまとめ、ハッシュは、別々の意味を持つ複数の値同士を1つにまとめられる。このことから、配列とハッシュを組み合わせて管理をする
 ・出力方法はこの動画URL https://master.tech-camp.in/v2/curriculums/4194   
 <img width="1613" alt="配列とハッシュの組み合わせ" src="https://user-images.githubusercontent.com/120078794/218974838-57f1e105-4eb6-4121-ba75-54beef55ce88.png">
+
+- 仮の値を入力した後の配列内の形
+```ruby
+friends =[
+  {name: "将寿", height:150},
+  {name: "あきとし", height:140},
+  {name: "さつき", height:130}
+]
+```
+- 取得方法と出力内容の例
+```ruby
+irb(main):006:0> puts friends
+{:name=>"将寿", :height=>150}
+{:name=>"あきとし", :height=>140}
+{:name=>"さつき", :height=>130}
+
+irb(main):007:0> puts friends[1]
+{:name=>"あきとし", :height=>140}
+
+irb(main):008:0> puts friends[1][:height]
+140
+```

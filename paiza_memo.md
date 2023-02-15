@@ -32,6 +32,7 @@ puts t
 # 期待する出力
 # Hello
 # paiza
+# 'Hello paiza'の部分をgetsにすることで、標準入力で与えることができる
 ```
 ```ruby
 a, b = [1, 2, 3] # a = 1; b = 2

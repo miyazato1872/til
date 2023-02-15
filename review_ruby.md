@@ -157,3 +157,23 @@ puts student
 puts teacher
 puts teacher[:name]　　　# これが取得のためのコード
 ```
+
+
+###　ハッシュの値を変更 
+```ruby
+ハッシュ[変更したい値のキー] = 値
+  
+# 以下は実例
+student = { "name" => "John", "age" => 10 }
+teacher = { name: "Mike", age: 25 }
+
+teacher[:subject] = "English"
+teacher[:name] = "Emma"   #　これが変更のためのコード
+
+puts student
+puts teacher
+puts teacher[:name]
+```
+
+
+## 配列は、複数の値を順番で管理し1つにまとめ、ハッシュは、別々の意味を持つ複数の値同士を1つにまとめられる。このことから、配列とハッシュを組み合わせて管理をする

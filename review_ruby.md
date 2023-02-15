@@ -177,4 +177,5 @@ puts teacher[:name]
 
 
 ## 配列は、複数の値を順番で管理し1つにまとめ、ハッシュは、別々の意味を持つ複数の値同士を1つにまとめられる。このことから、配列とハッシュを組み合わせて管理をする
-・出力方法はこの動画URL https://master.tech-camp.in/v2/curriculums/4194
+・出力方法はこの動画URL https://master.tech-camp.in/v2/curriculums/4194   
+<img width="1613" alt="配列とハッシュの組み合わせ" src="https://user-images.githubusercontent.com/120078794/218974838-57f1e105-4eb6-4121-ba75-54beef55ce88.png">

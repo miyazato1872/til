@@ -337,3 +337,18 @@ puts sum
 ```
 <img width="438" alt="スクリーンショット 2023-02-16 16 16 00" src="https://user-images.githubusercontent.com/120078794/219295496-71ebcaf0-67b2-4fb9-aeb1-fb0499bdb25c.png">
 
+
+# メソッドの概要
+- 戻り値  
+<img width="678" alt="スクリーンショット 2023-02-16 16 34 49" src="https://user-images.githubusercontent.com/120078794/219298269-7328a654-24b2-4886-b700-cac6e2804719.png">
+
+## メソッドに変数を渡す
+
+- 変数が使える範囲(スコープ)   
+<img width="703" alt="スクリーンショット 2023-02-16 16 37 12" src="https://user-images.githubusercontent.com/120078794/219298952-06e641ef-3bad-45a8-aff6-e11ad9703a84.png">   
+<img width="697" alt="スクリーンショット 2023-02-16 16 36 53" src="https://user-images.githubusercontent.com/120078794/219298875-55e30b68-f7f8-488e-8d80-86ad55122df4.png">   
+<img width="700" alt="スクリーンショット 2023-02-16 16 37 36" src="https://user-images.githubusercontent.com/120078794/219299028-0cc1349b-9e53-4dd3-a0d9<img width="672" alt="スクリーンショット 2023-02-16 16 37 24" src="https://user-images.githubusercontent.com/120078794/219299053-f5ea652a-6dd0-4744-8049-ab897876264c.png">
+-adb823de956f.png">   
+
+
+

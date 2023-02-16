@@ -203,3 +203,18 @@ irb(main):007:0> puts friends[1]
 irb(main):008:0> puts friends[1][:height]
 140
 ```
+
+### 条件分岐
+- if文  
+【elsifによる複数の条件分岐】
+```ruby
+if 条件式1
+  # 条件式1が真(true)のときに実行する処理
+elsif 条件式2
+  # 条件式1が偽(false)のとき、かつ
+  # 条件式2が真(true)のときに実行する処理
+else
+  # 条件式1と条件式2がどちらとも偽(false)のときに実行する処理
+end
+```
+

@@ -448,7 +448,7 @@ times,eachメソッドのスコープ範囲は、def〜endで定義するメソ�
 # メソッドの定義、times、eachを用いたミニアプリ　ローラーコースターのコード
 
 ```ruby
-ef judge_height(list)
+def judge_height(list)
   ride_count = 0
   list.each do |friend|
     if friend[:height] >= 130

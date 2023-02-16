@@ -33,6 +33,10 @@ puts t
 # Hello
 # paiza
 # 'Hello paiza'の部分をgetsにすることで、標準入力で与えることができる
+
+
+# 数値として取得する方法
+a, b = gets.chomp.split(" ").map(&:to_i)
 ```
 ```ruby
 a, b = [1, 2, 3] # a = 1; b = 2

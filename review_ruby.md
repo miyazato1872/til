@@ -375,7 +375,73 @@ puts sum
 
 <img width="531" alt="7" src="https://user-images.githubusercontent.com/120078794/219300882-403df54c-3c03-48df-a7b1-11704942304e.png">
 
+<img width="732" alt="スクリーンショット 2023-02-16 16 53 13" src="https://user-images.githubusercontent.com/120078794/219302101-4e61b2c1-5da5-4ddb-829c-a2918cc1cbad.png">
 
 
+## return文
+メソッド内でreturn ◯◯と記述すると、returnの後ろに続けた式がそのメソッドの戻り値になる。  
+returnを利用した時点で戻り値が決まり、メソッドはその行の処理を終えると強制的に終了する。  
 
+【例】　　
+```ruby
+def sample
+  "1"
+  "2"
+  "3"
+
+  return "4"  # ここで処理は終わり
+
+  "5"         # 呼ばれない
+  "6"         # 呼ばれない
+end
+
+puts sample   # => 4
+```
+
+### 引数
+引数は、メソッドなどに渡すことのできる値のこと。  
+引数によって、メソッドは外にある変数（スコープ外の変数）の値をメソッドの中で扱うことができる。
+- 実引数と仮引数の実用例
+
+```ruby
+# 期待する出力は両方とも「9」となります
+
+# 例①
+def sample(number)  # ②仮引数numberで、実引数「3」の値を受け取る
+  puts number * number  # ③「3」が代入されたnumberを使って「3 * 3」を行い出力する
+end
+
+sample(3)  # ①数値「3」を実引数にしてメソッドを呼び出し
+
+
+# 例②
+def sample(value)  # 仮引数は「value」
+  puts value * value
+end
+
+number = 3
+sample(number)  # 実引数は「number」
+
+```
+
+###　引数は複数用意ができる
+左から順に「第一引数」「第二引数」...「第○引数」と呼ぶ   
+【例】引数の呼び方
+```ruby
+def メソッド名(第一引数, 第二引数)
+  # 処理
+end
+
+メソッド名(第一引数, 第二引数)
+```
+実引数と仮引数の数は、必ず一致している必要があり、引数の数が一致していない場合は、エラーが生じる。
+
+### 複数の引数をメソッドで使う
+<img width="1530" alt="複数の引数を使ったメソッド" src="https://user-images.githubusercontent.com/120078794/219307105-0c1b29e4-9c20-4841-aa61-958b9f36a727.png">
+
+# times,eachメソッドのスコープ
+times,eachメソッドのスコープ範囲は、def〜endで定義するメソッドと違いがある   
+<img width="685" alt="スクリーンショット 2023-02-16 17 20 39" src="https://user-images.githubusercontent.com/120078794/219307818-868d2d2e-0def-4783-8de7-bb87ec35c03a.png">
+
+<img width="712" alt="スクリーンショット 2023-02-16 17 24 40" src="https://user-images.githubusercontent.com/120078794/219309626-d61701ad-78c0-440d-bfbd-42713eb5f138.png">
 

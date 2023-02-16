@@ -277,3 +277,25 @@ fruits.each do |item|
   puts item
 end
 ```
+
+- 配列の中にハッシュが入っている場合
+```ruby
+# 期待する出力
+りんごの重さは100gです
+オレンジの重さは80gです
+バナナの重さは150gです
+パイナップルの重さは300gです
+
+# 値をそれぞれ配列に格納させ、その配列に対してeach文を実行することで以下のように実現できる。
+
+fruits = [
+  {name: "りんご", weight: 100},
+  {name: "オレンジ", weight: 80},
+  {name: "バナナ", weight: 150},
+  {name: "パイナップル", weight: 300}
+]
+
+fruits.each do |fruit|
+  puts "#{fruit[:name]}の重さは#{fruit[:weight]}gです"
+end
+```

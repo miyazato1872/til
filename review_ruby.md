@@ -335,3 +335,5 @@ puts sum
 
 # 期待する出力は　55 
 ```
+<img width="438" alt="スクリーンショット 2023-02-16 16 16 00" src="https://user-images.githubusercontent.com/120078794/219295496-71ebcaf0-67b2-4fb9-aeb1-fb0499bdb25c.png">
+

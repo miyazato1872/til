@@ -344,11 +344,38 @@ puts sum
 
 ## メソッドに変数を渡す
 
-- 変数が使える範囲(スコープ)   
+### 変数が使える範囲(スコープ)   
 <img width="703" alt="スクリーンショット 2023-02-16 16 37 12" src="https://user-images.githubusercontent.com/120078794/219298952-06e641ef-3bad-45a8-aff6-e11ad9703a84.png">   
-<img width="697" alt="スクリーンショット 2023-02-16 16 36 53" src="https://user-images.githubusercontent.com/120078794/219298875-55e30b68-f7f8-488e-8d80-86ad55122df4.png">   
-<img width="700" alt="スクリーンショット 2023-02-16 16 37 36" src="https://user-images.githubusercontent.com/120078794/219299028-0cc1349b-9e53-4dd3-a0d9<img width="672" alt="スクリーンショット 2023-02-16 16 37 24" src="https://user-images.githubusercontent.com/120078794/219299053-f5ea652a-6dd0-4744-8049-ab897876264c.png">
--adb823de956f.png">   
+
+<img width="697" alt="スクリーンショット 2023-02-16 16 36 53" src="https://user-images.githubusercontent.com/120078794/219298875-55e30b68-f7f8-488e-8d80-86ad55122df4.png">  
+
+<img width="649" alt="スクリーンショット 2023-02-16 16 40 24" src="https://user-images.githubusercontent.com/120078794/219299363-5b8dc011-6aaf-412e-b4c0-520bba990591.png">   
+
+<img width="651" alt="スクリーンショット 2023-02-16 16 40 31" src="https://user-images.githubusercontent.com/120078794/219299415-c25e3c33-9ce1-4bf0-a7be-268918d0b620.png">   
+
+<img width="628" alt="メソッドのスコープ" src="https://user-images.githubusercontent.com/120078794/219299661-777db4bf-6893-41b3-81a7-f70419b47a41.png">   
+
+# メソッドに引数を使って変数を渡す方法
+- スコープ
+-　仮引数
+-　実引数
+- 戻り値  
+
+<img width="476" alt="1" src="https://user-images.githubusercontent.com/120078794/219301219-25390bf2-7f94-44a6-be86-39692cddef0d.png">
+
+<img width="522" alt="2" src="https://user-images.githubusercontent.com/120078794/219301256-e640989d-2a09-4d3e-9511-1fa420119e39.png">
+
+<img width="502" alt="3" src="https://user-images.githubusercontent.com/120078794/219301299-31362bc0-5fa7-4201-9afd-a78096bed81f.png">
+
+<img width="633" alt="4" src="https://user-images.githubusercontent.com/120078794/219300822-60a79e91-397b-48a8-a712-3d3a422c6391.png">
+
+<img width="598" alt="5" src="https://user-images.githubusercontent.com/120078794/219300857-01822478-c9b9-48a5-9dfd-656fbb086dbe.png">
+
+<img width="581" alt="6" src="https://user-images.githubusercontent.com/120078794/219300870-be56934e-71d9-4874-a3f8-78eb705db3d4.png">
+
+<img width="531" alt="7" src="https://user-images.githubusercontent.com/120078794/219300882-403df54c-3c03-48df-a7b1-11704942304e.png">
+
+
 
 
 

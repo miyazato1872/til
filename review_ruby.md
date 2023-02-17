@@ -523,7 +523,7 @@ puts fire_truck  # インスタンスを出力
 
 ## クラスメソッドとインスタンスメソッド
 
-### インスタンスメソッド   
+## インスタンスメソッド   
 インスタンスが使用できるメソッドです。クラスに定義しておきくこと。
 「インスタンスメソッドを定義したクラス」　　から生成されるインスタンスが使用できます。
 インスタンスごとの個別の情報（属性値）を使った処理に使用する   
@@ -577,8 +577,65 @@ class クラス名
     @変数名 = 値  # インスタンス変数
   end
 end
+
+class Car
+  def ride_car(ride_number)
+    @ride_number = ride_number
+  end
+end
+
+fire_truck = Car.new()
+fire_truck.ride_car(3)
+
+# @ride_numberには3という値が代入され、Carクラス内のすべてのインスタンスメソッドで使用できるようになった
 ```
 インスタンス変数の値は、生成されたインスタンスが個別に持つことができるため値は別々にできる   
 ※インスタンス変数のスコープは、そのクラスのすべてのインスタンスメソッド。  
 つまりインスタンス変数は、インスタンスが個別に持つ属性値が入り、そのインスタンスのすべての動作に使用できる変数ということになる
+
+
+## クラスメソッド
+クラスで共通の情報を使った処理に使用
+```ruby
+class クラス名
+  def self.メソッド名
+    # 処理
+  end
+end
+
+# 【例】クラスメソッドの呼び出し
+クラス名.メソッド名(引数)
+
+
+# 例
+class Car
+
+  def self.run
+    puts '走行します'
+  end
+
+  def ride_car(ride_number)
+    @ride_number = ride_number
+  end
+
+end
+
+fire_truck = Car.new()
+fire_truck.ride_car(3)
+
+Car.run
+
+```
+
+##それぞれのメソッドと変数の違い
+<img width="639" alt="スクリーンショット 2023-02-17 15 55 58" src="https://user-images.githubusercontent.com/120078794/219571604-66754997-2c69-4cfe-8697-9d17dc548af4.png">
+
+
+###　ローカル変数とインスタンス変数
+<img width="896" alt="スクリーンショット 2023-02-17 15 59 22" src="https://user-images.githubusercontent.com/120078794/219572415-87c7ded6-d334-4191-ac4b-d7bdad7a6b58.png">
+
+
+
+
+
 

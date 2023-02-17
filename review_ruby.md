@@ -627,15 +627,55 @@ Car.run
 
 ```
 
-##それぞれのメソッドと変数の違い
+## それぞれのメソッドと変数の違い
 <img width="639" alt="スクリーンショット 2023-02-17 15 55 58" src="https://user-images.githubusercontent.com/120078794/219571604-66754997-2c69-4cfe-8697-9d17dc548af4.png">
 
 
-###　ローカル変数とインスタンス変数
+### ローカル変数とインスタンス変数
 <img width="896" alt="スクリーンショット 2023-02-17 15 59 22" src="https://user-images.githubusercontent.com/120078794/219572415-87c7ded6-d334-4191-ac4b-d7bdad7a6b58.png">
 
 
+##  initializeメソッド　(イニシャライズ)
+- インスタンスが生成された際に、そのインスタンスが自動的に実行する処理を定義する特別なインスタンスメソッド   
+呼び出す必要がないので、必ず実行させたい処理などに記述する
 
+```ruby
+【例】initializeメソッドの定義と実行
+class Car
+  def initialize
+    # インスタンス生成したときに実行される処理（以下は例）
+    puts "Carクラスのインスタンスが生成されました"
+  end
+end
+
+# インスタンスを生成すると、initializeメソッドに定義してある処理が自動的に実行されます
+インスタンス = クラス名.new # => "Carクラスのインスタンスが生成されました"
+
+####### 【具体例】
+
+class Car
+
+  def initialize(car_name, car_model, capacity)
+    @name = car_name
+    @model = car_model
+    @capacity = capacity
+  end
+
+  def self.run
+    puts '走行します'
+  end
+
+  def ride_car(ride_number)
+    @ride_number = ride_number
+  end
+
+end
+
+fire_truck = Car.new('消防車', '大型車', 5)
+fire_truck.ride_car(3)
+
+Car.run
+```
 
 
 

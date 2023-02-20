@@ -123,4 +123,18 @@ end
 ```
 
 ### 二次元配列　
+```ruby
+n = gets.to_i
+roster = Array.new(n)  #長さがnの配列を生成
 
+n.times do |i|   # n回繰り返す
+  roster[i] = gets.split(' ')   # 配列roster[0]から順番に、右のような型で二次元配列で保存される[[ユーザーA,32],[ユーザーB,27],[ユーザーC,40]]
+end
+
+roster.each do |member|  # 二次元配列のroster[0]から順番に繰り返し、配列内の要素をそれぞれ変数に代入する roster[0]に該当する[ユーザーA,32]からeach開始
+  name = member[0]  #[ユーザーA,32]の"ユーザーA"を変数nameに代入
+  age = member[1].to_i  # [ユーザーA,32]の"32"を数値として変数ageに代入
+
+  puts "#{name} #{age + 1}"    #「ユーザーA 33」として出力して、eachの最初に戻ってroster[1]で同じ処理を繰り返す
+end
+```

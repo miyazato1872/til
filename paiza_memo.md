@@ -61,3 +61,40 @@ three
 four  
 five  
 になる
+
+
+### maxメソッド
+```ruby
+numbers = [1, 2, 3, 10, 4, 5]
+max = numbers.max
+puts max
+
+# 出力：
+# 10
+```
+
+### maxメソッド
+```ruby
+numbers = [1, 2, 3, 10, 4, 5]
+max = numbers.max
+puts max
+
+# 出力：
+# 10
+```
+### joinメソッド　
+
+```ruby
+array = ["apple", "grape", "orange"]
+
+puts array.join(' ')
+# => apple grape orange
+
+
+
+array = ["1", "2", "3"]
+
+puts array.join(' ')
+# => 1 2 3
+
+```

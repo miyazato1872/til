@@ -100,7 +100,7 @@ puts array.join(' ')
 ```
 
 ### Arrayクラス
-- new　　　join  timesを使って標準入力、横並びに半角区切りで標準出力をする
+- new  join. timesを使って標準入力、横並びに半角区切りで標準出力をする
 ```ruby
 n = gets.to_i
 arr = Array.new(n)   # Array.newで配列を生成。その配列の長さは、newの引数(n)で入力された数値で決めてる
@@ -110,6 +110,16 @@ arr = Array.new(n)   # Array.newで配列を生成。その配列の長さは、
 puts arr.join(' ')   #　arrに入った要素"paiza"n個を、putsで出力する。その際に、joinメソッドを使って(' '）を使って繋いで出力している
 ```
 
+- 改行区切りでの出力   
+整数nを与えられて、次の行で半角スペース区切りでn個の整数を与えられる。それを改行区切りで出力する
+```ruby
+n = gets.to_i   #2行目で入力する数値の数
+arr = gets.split(" ").map(&:to_i)   #arrに配列として数値を保存している作業[5, 6, 10, 3, .... ]
 
+arr.each do |num|  # 配列arrの要素数と同じ数だけeachによって繰り返されて、num[0]、num[1]、num[2]...の順番でarrの値がnumに代入される
+  puts num   #  arrの要素が代入されたnumがputsで出力される　num[0]、num[1]、num[2]...
+end
+
+```
 
 

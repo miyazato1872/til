@@ -98,3 +98,18 @@ puts array.join(' ')
 # => 1 2 3
 
 ```
+
+### Arrayクラス
+- new　　　join  timesを使って標準入力、横並びに半角区切りで標準出力をする
+```ruby
+n = gets.to_i
+arr = Array.new(n)   # Array.newで配列を生成。その配列の長さは、newの引数(n)で入力された数値で決めてる
+  n.times do |i|　　　# ブロック変数の|i|は、0から始めてn.timesの回数を繰り返す 0,1,2,3,4...
+    arr[i] = "paiza"   # 変数arr(配列)の引数の場所[i]→0,1,2,3,4...の場所に、"paiza"を入れていく
+  end
+puts arr.join(' ')   #　arrに入った要素"paiza"n個を、putsで出力する。その際に、joinメソッドを使って(' '）を使って繋いで出力している
+```
+
+
+
+

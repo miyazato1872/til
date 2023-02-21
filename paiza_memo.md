@@ -160,12 +160,16 @@ end
 # 1
 # 2
 ```
-### sprintf フォーマット
+### sprintf フォーマット　　
 - 出力を右詰めにして余った左側に希望する数の0を詰める方法
 ```ruby
 p sprintf("%010d", 10)   #=> "0000000010"
+
+
+format("%06d", 123)      #=> "000123"
 ```
-参考URL  https://docs.ruby-lang.org/ja/latest/doc/print_format.html
+参考URL  https://docs.ruby-lang.org/ja/latest/doc/print_format.html   
+こっちの方が参考になるかも　➡︎ https://remoter.hatenablog.com/entry/2020/02/20/ruby%E3%81%A7%E6%95%B0%E5%80%A4%E3%82%92%E3%82%BC%E3%83%AD%E5%9F%8B%E3%82%81%E3%81%97%E3%81%9F
 
 
 ### splitメソッド

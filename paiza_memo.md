@@ -138,3 +138,25 @@ roster.each do |member|  # 二次元配列のroster[0]から順番に繰り返�
   puts "#{name} #{age + 1}"    #「ユーザーA 33」として出力して、eachの最初に戻ってroster[1]で同じ処理を繰り返す
 end
 ```
+
+### while文
+- 指定した条件式が真(true)の間、繰り返し実行する
+```ruby
+# 基本構文
+while 条件式　do
+実行する処理１
+実行する処理２
+end
+
+
+# コード例
+num = 0
+while num <= 2 do
+ num += 1
+end
+
+# 実行結果
+# 0
+# 1
+# 2
+```

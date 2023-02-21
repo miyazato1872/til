@@ -166,3 +166,28 @@ end
 p sprintf("%010d", 10)   #=> "0000000010"
 ```
 参考URL  https://docs.ruby-lang.org/ja/latest/doc/print_format.html
+
+
+### splitメソッド
+- 文字列を分割して配列にするためのメソッド   
+引数に任意の文字を指定することで、その指定した文字で配列内で分割することができる。
+```ruby
+# 参考例①
+str = "samurai,engineer,blog" 
+array = str.split(",") 
+p array
+
+# 出力結果
+# ["samurai", "engineer", "blog"]
+
+
+# 参考例②
+str = "123456" 
+array = str.split("34")
+p array
+
+# 出力結果
+# ["12", "56"]
+```
+- 他にも応用として正規表現を使用して細かな条件での分割や1文字ずつ分割する方法もある   
+参考URL　➡︎  https://www.sejuku.net/blog/41681

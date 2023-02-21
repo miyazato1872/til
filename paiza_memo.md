@@ -160,3 +160,9 @@ end
 # 1
 # 2
 ```
+### sprintf フォーマット
+- 出力を右詰めにして余った左側に希望する数の0を詰める方法
+```ruby
+p sprintf("%010d", 10)   #=> "0000000010"
+```
+参考URL  https://docs.ruby-lang.org/ja/latest/doc/print_format.html

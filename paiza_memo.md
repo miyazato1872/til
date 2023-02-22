@@ -36,7 +36,11 @@ puts t
 
 
 # 数値として取得する方法
-a, b = gets.chomp.split(" ").map(&:to_i)
+a, b = gets.split(" ").map(&:to_i)
+
+# 文字列として取得する方法
+a, b = gets.chomp.split(" ")
+
 ```
 ```ruby
 a, b = [1, 2, 3] # a = 1; b = 2

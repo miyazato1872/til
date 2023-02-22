@@ -32,7 +32,7 @@ print("World")
 # データ型
 - 整数を扱う int 型や、文字列を扱う str 型など
 ### 浮動小数点数
-- ざっくり小数点のつく数値のこと
+- ざっくり小数点のつく数値のこと。/を使うとこれになる。//は整数になる
 - 浮動小数点数の型は、int関数を使って小数点以下を切り捨てて整数にできる
 ```python
 print(813)
@@ -131,5 +131,63 @@ print(12 * 8 ** 3)
 # => 6144
 ```
 
+
+# 変数への代入
+- 基礎的なコードはRubyと同じ
+```python
+num = 5
+num_2 = num
+print(num_2)
+
+num_3 = num + 1
+print(num_3)
+
+# => 5
+# => 6
+```
+
+# 累算代入演算子
+- Rubyの代入演算子と同じ考え
+```python
+num = 1
+num += 2  # num = num + 2 と同じ意味
+print(num)
+
+num = 1
+num -= 1  # num = num - 1 と同じ意味
+print(num)
+
+num = 2
+num *= 12  # num = num * 12 と同じ意味
+print(num)
+
+num = 2
+num /= 2  # num = num / 2 と同じ意味
+print(num)
+
+num = 2
+num //= 2  # num = num // 2 と同じ意味
+print(num)
+
+num = 7
+num %= 5  # num = num % 5 と同じ意味
+print(num)
+
+num = 5
+num **= 2  # num = num ** 2 と同じ意味
+print(num)
+```
+### Python は再代入する際に型を変更することができる
+```python
+a = "paiza"
+print(a)
+
+a = 813
+print(a)
+
+# => paiza
+# => 813
+```
+型を横断する再代入を繰り返すコードは、コードのデバッグ時にトラブルの原因になりうるので望ましいとはいえない
 
 

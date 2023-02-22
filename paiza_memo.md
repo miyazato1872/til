@@ -23,7 +23,7 @@ puts n * 100
 puts gets.to_i * 100
 ```
 
-### 配列の多重代入
+# 配列の多重代入
 ```ruby
 s, t = 'Hello paiza'.split(' ')
 puts s

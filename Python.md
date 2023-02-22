@@ -1,3 +1,9 @@
+- Python 言語リファレンス
+https://docs.python.org/ja/3/reference/index.html
+
+- Python3 系 基礎文法 - Qiita
+http://qiita.com/rohinomiya/items/aab6b16d1a470871713c
+
 # print関数
 ```Python
 # デフォルトで末尾に改行がある

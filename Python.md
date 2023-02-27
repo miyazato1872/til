@@ -270,3 +270,29 @@ abcabc
 a abc
 aaaaaaaaaa abcabc
 ```
+
+## f 文字列
+- Rubyの"#{}"と似たようなイメージ。また、整数値を文字列にも自動的に変換してくれる
+```python
+time = "10"
+place = "会議室　A"
+print(f"{time}時から{place}で会議が行われる。")
+
+time = 10 #ここは整数にしている
+place = "会議室　A"
+print(f"{time}時から{place}で会議が行われる。")
+
+
+# 出力結果
+# 10時から会議室　Aで会議が行われる。
+# 10時から会議室　Aで会議が行われる。
+```
+
+## 数値 から 文字列に変換　(str関数)
+- Rubyのto_sのイメージ
+```python
+time = 10
+print(str(time) + "時から会議が行われる")
+
+# => 10時から会議が行われる
+```

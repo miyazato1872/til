@@ -337,9 +337,11 @@ Rubyでのメソッド定義と違う点は
 ## アクセス修飾子
 <img width="637" alt="スクリーンショット 2023-02-27 23 44 32" src="https://user-images.githubusercontent.com/120078794/221594551-5ff460f4-5aa8-4406-93de-3d8ad07af20b.png">    
 外部への公開範囲を設定するためのもので、以下の３種類がある。
-- public
-- protected
-- private   
+
+
+- public   
+- protected   
+- private    
 
 
 使用するアクセス修飾子によって、以下の設定を行うことができる

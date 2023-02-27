@@ -373,3 +373,39 @@ sayHello();
 引数が必要ないメソッドでも、かっこは省略できない
 
 ### メソッドの引数の使い方について
+```java
+class Main {
+  public static void main(String[] args) {
+    var answer = square(5);
+    System.out.println(answer);
+  }
+
+  public static int square(int number){
+    return number * number;
+  }
+}
+
+// 実行結果
+// => 25
+```
+<img width="708" alt="スクリーンショット 2023-02-28 0 01 18" src="https://user-images.githubusercontent.com/120078794/221598943-be585b0a-0657-43d0-b687-b59014e6790a.png">
+
+
+上記のように、引数の使い方はRubyの場合とほぼ同じで、仮引数にデータ型の指定が必要なことだけが異なるということになる
+①
+変数answeを定義しsquare(5)を代入する    
+その「square」は、引数で5を渡されて、「square」の定義の際に使われている
+
+
+
+
+
+
+
+
+
+
+
+
+
+

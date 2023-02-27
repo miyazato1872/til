@@ -226,3 +226,26 @@ print(s[:])
 # => s[:j] のように指定すると、先頭の文字列からインデックスが j-1 の文字列までの部分文字列を取得できる。逆も同様
 ```
 
+## 文字列の長さを取得(len)
+```python
+s = "Hello, World!"
+print(len(s))
+
+# =>　13
+# カンマや半角スペースもカウントされる
+```
+
+## 文字列の結合(+)
+```python
+print("Hello " + "World!" )  
+
+s = "Hello "
+t = "World!"
+s += t
+print(s)
+
+
+# => Hello World!
+# => Hello World!
+
+```

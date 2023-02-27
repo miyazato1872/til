@@ -249,3 +249,24 @@ print(s)
 # => Hello World!
 
 ```
+
+## 文字列の反復(*)
+```python
+s1 = "a"
+print(s1 * 10)
+
+s2 ="abc"
+print(s2 * 2)
+
+print(s1, s2)
+
+s1 *= 10
+s2 = s2 * 2
+print(s1, s2)
+
+# 実行結果は以下
+aaaaaaaaaa
+abcabc
+a abc
+aaaaaaaaaa abcabc
+```

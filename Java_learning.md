@@ -2,6 +2,8 @@
 ```
 # データ型
 変数に格納するデータの種類のこと
+- メモリ：Rubyでいう配列のように、データを入れる箱が連続で並んでいるイメージ   
+その際、数値は「2進数」に変換して扱われる
 - 10進数の「100」は、2進数では「1100100」
 https://www.xn--2-g90b954airby76h.net/hayamihyo-2shinsu.php
 
@@ -41,6 +43,7 @@ class Main {
 ③ printlnを実行して、計算結果を出力する。    
 
 # 型推論
+- 「var」を使って変数を宣言することで、値の種類によって、データ型を推論してくれて宣言と初期値の代入を同時にできる
 ```java
 class Main {
   public static void main(String[] args) {

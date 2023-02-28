@@ -224,10 +224,50 @@ src/main/resources/templates/hello.html
 </html>
 ```
 
+Sping Bootの場合は、Model型のオブジェクトを使用して、以下の流れで変数を渡します。    
+(Railsでコントローラーからビューに変数を渡す場合は、コントローラーでインスタンス変数に値を代入していた).  
+
+① コントローラーの引数でModelオブジェクトを受け取る.  
+② Modelオブジェクトに、ビューで表示させたいデータを追加する.  
+③ ビューでModelオブジェクトのデータを読み込む.  
 
 
+以下のようにshowHelloメソッドの仮引数に「Model model」と指定することで、Modelオブジェクトを受け取ることができます。このオブジェクトの変数名は、modelとすることが一般的
+```java
+@GetMapping("/hello")
+public String showHello(Model model){
+
+    // 省略
+
+}
+```
+続いて以下のコードでmodelにデータを追加
+```java
+@GetMapping("/hello")
+public String showHello(Model model){
+    var sampleText = "サンプルテキスト";
+    model.addAttribute("sampleText", sampleText);
+    return "hello";
+}
+```
+model.addAttribute("sampleText", sampleText);のaddAttributeが追加を行うためのメソッド。    
+- 引数にsampleTextが２回出てくることの解説
+１つ目の引数では、ビューで読み込む際の名称を指定しています。ダブルクォーテーションで囲んで文字列として指定する必要があることに注意しましょう。   
+
+２つ目ではmodelに追加したいデータを指定しています。直前の行でvar sampleText = "サンプルテキスト";と記述していますが、ここではこのsampleTextを指定しています。    
+
+Rubyでハッシュを利用する際はキーとバリューを指定しますが、それに似たものと捉えると分かりやすいかもしれません。　　　
 
 
+### ビューでの良い子見方を確認.   
+<p th:text="${sampleText}"></p>
 
 
+Thymeleafのth:textを使用すると、「表示したいテキスト」を任意の内容に置き換えることができます。   
+   
+ここではth:text="${sampleText}"と記述することで、「表示したいテキスト」の箇所を「sampleText」の内容に置き換えています。   
+   
+コントローラーで、sampleTextに「サンプルテキスト」という文字列を設定しているので、置き換えた後は以下のように記述したのと同じ結果になります。   
+   
+<p>サンプルテキスト</p>
 

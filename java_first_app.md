@@ -170,3 +170,64 @@ public class PostController {
 2つの作業が必要。　　     
 ① 表示させるためのHTMLを作成する.  
 ② コントローラーから①のファイルを読み込めるようにする.  
+
+
+今回はHTMLファイルに固定の文字列を記述していますが、RailsのERBファイルにRubyのコードを埋め込むことができたように、Thymeleafを使うとJavaのコードを埋め込むことができる
+
+```java
+@Controller
+public class PostController {
+    @GetMapping("/hello")
+    public String showHello(){
+        return "hello";
+    }
+}
+```
+return "hello";の部分で、表示させるHTMLファイルの名称を指定している。   
+「hello.html」を呼び出したい場合、「.html」部分は省略可能.  
+return "hello";と記述することで、「templates」フォルダにある「hello.html」を呼び出すことができる
+
+
+# Thymeleafで変数を使う
+
+src/main/java/in.techcamp.firstapp/PostController.java
+```java
+package in.techcamp.firstapp;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class PostController {
+    @GetMapping("/hello")
+    public String showHello(Model model) {
+        var sampleText = "サンプルテキスト";
+        model.addAttribute("sampleText", sampleText);
+        return "hello";
+    }
+}
+```
+ビューのコードを変更.   
+src/main/resources/templates/hello.html
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello World from Thymeleaf!</h1>
+<p th:text="${sampleText}"></p>
+</body>
+</html>
+```
+
+
+
+
+
+
+
+

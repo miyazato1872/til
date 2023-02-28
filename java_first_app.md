@@ -39,11 +39,12 @@
 
 
 ## アノテーション「注釈」
-- アノテーションは、クラスやメソッドに特別な意味を持たせるための機能    
+**アノテーションは、クラスやメソッドに特別な意味を持たせるための機能**   
 「@」で始まる文字
 
 
 ###  @Controller
+- @Controllerは、そのクラスがコントローラーであることをSpringに伝えるためのアノテーション    
 「PostControllerクラス」の直前に「@Controller」
 ```java
 @Controller
@@ -51,13 +52,114 @@ public class PostController {
 
 }
 ```
-@Controllerは、そのクラスがコントローラーであることをSpringに伝えるためのアノテーション.   
-Railsでは、「rails g controller」というコマンドを実行することでコントローラーを作成しました。それに対してSpringでは、クラス定義の直前に「@Controller」と記述することで、クラスがコントローラーとして扱われるようになる
+Railsでは、「rails g controller」というコマンドを実行することでコントローラーを作成できた。    
+Springでは、クラス定義の直前に「@Controller」と記述することで、クラスがコントローラーとして扱われるようになる
+```java
+@Controller
+public class PostController {
 
-
+}
+```
 Spring Bootのアプリ実行時にコンポーネントスキャンという処理が行われますが、スキャン中にアノテーションを発見すると、それが付けられたクラスに対して必要な事前準備が行われる仕組み
 
 
 
+###  @GetMapping
+- GetMappingは、ブラウザで入力されたURLと、実行されるメソッドを紐づけるためのアノテーション.    
+
+Railsで、routes.rbファイルに記述したルーティングと同様の機能。    
+
+Springの場合
+```java
+@GetMapping("/hello")
+@ResponseBody
+public String showHello(){
+
+}
+```
+Railsのルーティング
+```ruby
+  get 'posts', to: 'posts#index'
+```
+メソッドの前に、「@GetMapping("/hello")」というアノテーションをつけることで、URLに「（アプリのルートパス）/hello」と入力された場合、そのメソッドが実行されるようになる    
+
+@GetMappingはHTTPメソッドとして「GET」が送信された場合のアノテーション。似たものとして、後で学習する「@PostMapping」がある。
+
+###  @ResponseBody
+- @ResponseBodyは、ブラウザからのリクエストに対して、直接HTMLを返す際に利用するアノテーション。　　　　　
+通常あまり使用されることはないので、以降は一般的な記述方法に置き換えていく
+
+
+```java
+@Controller
+public class PostController {
+    @GetMapping("/hello")
+    @ResponseBody
+    public String showHello(){
+        return "<h1>Hello World!</h1>";
+    }
+}
+```
+上記のコードは以下の意味になる
+- PostContorllerクラスは、コントローラーとして扱われる
+- このコントローラー内で、「(アプリのルートパス)/hello」とURLが入力されたら「showHello()メソッド」が実行されるよう設定されている
+
+
+showHello()メソッドの中身について確認
+```java
+public String showHello(){
+    return "<h1>Hello World!</h1>";
+}
+```
+showHello()の前に、「String」と記述　=>　返り値が「文字列」のメソッド　　　　　　　　　  
+showHello()メソッドは、実行すると<h1>Hello World!</h1>という文字列を返すメソッド。     
+この文字列がHTMLとして解釈され、ブラウザに表示される仕組み
+
+
+# テンプレートエンジン
+RailsではERBというテンプレートエンジンを使用してRubyのコードをビューに埋め込みし、このERBを使用することで、コントローラーとビューのコードを分離して管理しやすくすることができていた。　　　　
+
+似たものとして、Spring BootにはThymeleafタイムリーフというライブラリがある
+
+## Thymeleaf(タイムリーフ)
+1. 「build.gradle」ファイルに記述を行って導入する。(RailsのGemfileに似た役割のファイル)
+2. firstapp/src/main/resources/templates フォルダを右クリック。メニューの中から、「新規」「HTMLファイル」を選択。　例として　　「hello.html」とし、ファイル名を入力したらエンターキー
+3. 作成したHTMLファイルを編集
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello World from Thymeleaf!</h1>
+</body>
+</html>
+```
+
+### コントローラーを変更
+コントローラーからHTMLファイルを読み込めるようにする。
+
+src/main/java/in.techcamp.firstapp/PostController.java
+```java
+package in.techcamp.firstapp;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class PostController {
+    @GetMapping("/hello")
+//    @ResponseBody
+    public String showHello(){
+        return "hello";
+    }
+}
+```
+※本来は削除でいいが、分かりやすくコメントアウトにしている。　　　　
+元々10行目に記述されていた@ResponseBodyは不要なので削除。　　　
+同時にインポートも不要になるので、import org.springframework.web.bind.annotation.ResponseBody;の記述も削除。
 
 

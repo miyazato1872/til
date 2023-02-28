@@ -295,3 +295,14 @@ public class PostController {
 }
 ```
 @GetMappingとアノテーションの記述を行なっていますが、これは@GetMapping("/")と書くのと同じ意味です。ルートパス（/）を指定する場合の("/")は省略可能です。
+
+
+## エンティティ
+エンティティとは、データベースと連携する際にデータを格納するためのオブジェクト
+
+### ファイルの作成
+- 作成場所：「firstapp」「src」「main」「java」「in.techcamp.firstapp」
+- 種類：Javaクラス
+- 名称：PostEntity
+
+

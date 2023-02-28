@@ -272,4 +272,26 @@ Thymeleafのth:textを使用すると、「表示したいテキスト」を任�
 <p>サンプルテキスト</p>
 
 
-# 【一覧表示機能を実装しよう】以降のカリキュラムをメモするか検討する
+```java
+package in.techcamp.firstapp;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class PostController {
+    @GetMapping("/hello")
+    public String showHello(Model model) {
+        var sampleText = "サンプルテキスト";
+        model.addAttribute("sampleText", sampleText);
+        return "hello";
+    }
+
+    @GetMapping
+    public String showList(){
+        return "index";
+    }
+}
+```
+@GetMappingとアノテーションの記述を行なっていますが、これは@GetMapping("/")と書くのと同じ意味です。ルートパス（/）を指定する場合の("/")は省略可能です。

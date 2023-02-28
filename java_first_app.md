@@ -158,8 +158,15 @@ public class PostController {
     }
 }
 ```
-※本来は削除でいいが、分かりやすくコメントアウトにしている。　　　　
-元々10行目に記述されていた@ResponseBodyは不要なので削除。　　　
+※本来は削除でいいが、分かりやすくコメントアウトにしている。
+
+
+元々10行目に記述されていた@ResponseBodyは不要なので削除。
+
+
 同時にインポートも不要になるので、import org.springframework.web.bind.annotation.ResponseBody;の記述も削除。
 
-
+## Thymeleafの使い方を確認.   
+2つの作業が必要。　　     
+① 表示させるためのHTMLを作成する.  
+② コントローラーから①のファイルを読み込めるようにする.  

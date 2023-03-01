@@ -445,9 +445,15 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         String text = scan.next();
         System.out.println(text);
+        int number = scan.nextInt();
+        System.out.println(number);
     }
 }
 
 // 入力内容 =>Paizaラーニング
+//         =>193
+
 // 出力結果　　=>Paizaラーニング
+//         =>193
+
 ```

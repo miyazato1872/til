@@ -436,4 +436,18 @@ class Main {
 - 継承
 - ポリモーフィズム
 
+# 変数に代入する方法
+```java
+import java.util.*;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String text = scan.next();
+        System.out.println(text);
+    }
+}
+
+// 入力内容 =>Paizaラーニング
+// 出力結果　　=>Paizaラーニング
+```

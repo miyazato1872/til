@@ -329,3 +329,93 @@ Railsの場合、Javaのリポジトリに相当するものはあらかじめ�
 - コンストラクタやゲッター・セッターは直接コードを記述することなく、Lombokを使用するのが一般的です。
 
 
+## 投稿フォームの作成
+- ステップ
+① Formクラスを作成する.  
+② コントローラーを変更する.  
+③ ビューを作成する.  
+
+
+### ① Formクラスを作成する.  
+=>フォームに入力されたデータを格納するためのクラス.   
+Railsではparamsで保存できたのでそれに変わるもののイメージ.   
+src/main/java/in.techcamp.firstapp/PostForm.java
+```java
+package in.techcamp.firstapp;
+
+import lombok.Data;
+
+@Data
+public class PostForm {
+    private String memo;
+}
+```
+
+### ② コントローラーを変更する.  
+作成したFormクラスをビューに渡すことによって、フォームの入力内容とFormクラスを関連づける
+```java
+package in.techcamp.firstapp;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+@Controller
+@RequiredArgsConstructor
+public class PostController {
+    private final PostRepository postRepository;
+
+    @GetMapping("/hello")
+    public String showHello(Model model) {
+        var sampleText = "サンプルテキスト";
+        model.addAttribute("sampleText", sampleText);
+        return "hello";
+    }
+
+    @GetMapping
+    public String showList(Model model) {
+        var postList = postRepository.findAll();
+        model.addAttribute("postList", postList);
+        return "index";
+    }
+
+    @GetMapping("/postForm")
+    public String showPostForm(@ModelAttribute("postForm") PostForm form){
+        return  "postForm";
+    }
+}
+```
+
+
+### ② ③ ビューを作成する.  
+- ファイルを作成して記述.   
+src/main/resources/templates/postForm.html
+```java
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>新規投稿</title>
+</head>
+<body>
+<h1>新規投稿ページ</h1>
+<form action="#" th:action="@{/posts}" th:method="post" th:object="${postForm}">
+  <input type="text" id="summaryInput" th:field="*{memo}">
+  <button type="submit">作成</button>
+</form>
+</body>
+</html>
+```
+
+
+
+
+
+
+
+
+
+
+

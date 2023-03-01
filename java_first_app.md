@@ -409,6 +409,17 @@ src/main/resources/templates/postForm.html
 </html>
 ```
 
+# デプロイ
+## Elastic Beanstalk(エラスティックビーンストーク)
+AWSが提供しているサービスの１つ。Renderと似たサービスで、AWSの無料枠で使用することができる。
+
+
+## Railway(レイウェイ)
+Renderと同様に、アプリを簡単にデプロイできるサービスです。ただし、Javaアプリには対応していません。   
+今回は、RailwayをMySQLを使用するためだけに使用する。   
+※BeanstalkとRDSを組み合わせてデプロイを行うことも可能ですが、RDSはセキュリティが強固で不正なアクセスを予防できる反面、設定が複雑で基礎学習には適していないので今回はRaiwayを使用。
+
+
 
 
 
